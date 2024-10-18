@@ -1,14 +1,14 @@
 /* Global Styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #f9f9f9;
     line-height: 1.6;
 }
 
@@ -17,51 +17,59 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    overflow: hidden;
 }
 
 /* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo img {
-    width: 80px;
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
 }
 
-header h1 {
-    font-size: 2.2em;
-    margin: 0;
+header .logo img:hover {
+    transform: rotate(360deg);
 }
 
 header .contact-info {
     text-align: right;
+    color: white;
+}
+
+header .contact-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 header .contact-info p {
-    margin: 0;
-    font-size: 0.9em;
+    font-size: 1em;
+    margin: 5px 0;
 }
 
 header .contact-info img {
-    width: 130px;
-    margin-top: 10px;
+    margin-top: 15px;
+    width: 150px;
 }
 
 /* About Me Section */
 #about {
     background-color: #fff;
+    margin: 30px 0;
     padding: 40px;
-    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
 #about img.profile-pic {
@@ -69,11 +77,40 @@ header .contact-info img {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#about img.profile-pic:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 #about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Professional Summary Section */
+#professional-summary {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#professional-summary h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#professional-summary p {
     font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
 }
 
 /* Work Experience Section */
@@ -81,7 +118,7 @@ header .contact-info img {
     background-color: #fff;
     padding: 40px;
     margin: 20px 0;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -90,16 +127,25 @@ header .contact-info img {
 }
 
 .job h3 {
-    cursor: pointer;
-    background-color: #555;
+    font-size: 1.8em;
+    background-color: #333;
     color: white;
     padding: 15px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .job h3:hover {
-    background-color: #777;
+    background-color: #555;
+}
+
+.job .job-details {
+    display: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 .job img {
@@ -109,52 +155,71 @@ header .contact-info img {
     border-radius: 5px;
 }
 
-/* Downloads Section */
+/* Download Resume Section */
 #downloads {
     text-align: center;
     padding: 40px;
     background-color: #fff;
     margin: 20px 0;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #downloads button {
-    padding: 10px 25px;
+    padding: 15px 30px;
     margin: 10px;
     background-color: #333;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.2em;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 #downloads button:hover {
     background-color: #555;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 30px;
-    margin-top: 30px;
+    border-top: 5px solid #444;
 }
 
 footer img {
     width: 100px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 footer p {
+    margin-top: 10px;
     font-size: 0.9em;
-    margin: 0;
+    color: #ddd;
 }
 
-/* Media Queries for Responsiveness */
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -172,6 +237,6 @@ footer p {
     }
 
     #about img.profile-pic {
-        margin: 0 0 20px 0;
+        margin-bottom: 20px;
     }
 }
