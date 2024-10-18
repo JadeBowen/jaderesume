@@ -1,0 +1,86 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Gradients for Sections */
+#about, #downloads, #professional-summary {
+    background: linear-gradient(135deg, #333, #666);
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #333, #555);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #555, #777);
+    transform: scale(1.05);
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header .contact-info {
+    text-align: right;
+}
+
+header .contact-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .contact-info p,
+header .contact-info a {
+    font-size: 1rem;
+    color: #fff;
+}
+
+header .contact-info a:hover {
+    text-decoration: underline;
+}
+
+header .contact-info img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+/* Icons */
+a i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
