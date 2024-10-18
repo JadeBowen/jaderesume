@@ -3,115 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Bowen - Professional Resume</title>
-    
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.min.css">
-    
-    <!-- Meta tags for SEO and social media -->
-    <meta name="description" content="Jade Bowen's Professional Resume - Telecommunications and Construction Expert">
-    <meta name="keywords" content="Resume, Telecommunications, Construction, Project Management, Leadership">
-    <meta property="og:title" content="Jade Bowen - Professional Resume">
-    <meta property="og:description" content="Over 21 years of experience in telecommunications and construction.">
-    <meta property="og:image" content="https://github.com/JadeBowen/jaderesume/blob/main/1676625570373.jpeg?raw=true">
-    
+    <title>Jade Bowen Resume</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
+    <script src="script.js" defer></script> <!-- External JavaScript file -->
+    <style>
+        /* Basic styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #008CBA;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .job-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .job-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+        .job-section p {
+            font-size: 14px;
+            color: #777;
+        }
+        .expandable {
+            display: none;
+        }
+        .expand-btn, .collapse-btn {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .collapse-btn {
+            display: none;
+        }
+        /* QR Code section */
+        .contact {
+            text-align: center;
+        }
+        .contact img {
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Jade Bowen Resume</h1>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="https://github.com/JadeBowen/jaderesume/blob/main/1676625570373.jpeg?raw=true" alt="Jade Bowen Logo" width="100">
-                </div>
-                <div class="contact-info">
-                    <h1>Jade Bowen</h1>
-                    <p>Boise, ID 83709</p>
-                    <p>Email: <a href="mailto:jade.bowen.career@gmail.com">jade.bowen.career@gmail.com</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/in/jadebowen" target="_blank">linkedin.com/in/jadebowen</a></p>
-                    <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code to Resume" width="150">
-                </div>
+        <!-- Contact details and QR codes -->
+        <div class="contact">
+            <p>Email: Jade.Bowen.career@gmail.com | Phone: 208-371-0647</p>
+            <p><a href="https://linkedin.com/in/jadebowen" target="_blank">LinkedIn: linkedin.com/in/jadebowen</a></p>
+            <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code Website"> 
+            <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code LinkedIn"> 
+        </div>
+
+        <h2>Professional Experience</h2>
+
+        <!-- Job 1: Finance and Marketing Manager -->
+        <div class="job-section">
+            <h3>Finance and Marketing Manager</h3>
+            <p>Boise's Best Auto Sales – Boise, ID | June 2023 – Present</p>
+            <ul>
+                <li>Spearheaded financial strategy, managing budgeting, forecasting, and financial reporting.</li>
+            </ul>
+            <div id="job1" class="expandable">
+                <ul>
+                    <li>Developed and executed advanced marketing strategies, including digital advertising, social media campaigns, and public relations efforts.</li>
+                    <li>Collaborated with cross-functional teams to enhance operational processes, improve customer service delivery, and drive business growth.</li>
+                    <li>Analyzed market trends and competitor activities, identifying growth opportunities and guiding strategic decisions.</li>
+                    <strong>Key Achievements:</strong>
+                    <ul>
+                        <li>Increased gross profit margin through strategic cost management and marketing initiatives.</li>
+                        <li>Implemented a loyalty program and personalized marketing campaigns to improve customer retention.</li>
+                        <li>Reduced operational costs by renegotiating vendor contracts and streamlining financial processes.</li>
+                    </ul>
+                </ul>
             </div>
+            <button class="expand-btn" id="expand-job1" onclick="toggleDetails('job1')">Read More</button>
+            <button class="collapse-btn" id="collapse-job1" onclick="toggleDetails('job1')">Read Less</button>
         </div>
-    </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="https://github.com/JadeBowen/jaderesume/blob/main/20140905_134117.jpg?raw=true" alt="Jade Bowen Headshot" class="profile-pic">
-                <p>
-                    I started climbing cell phone towers at 18 and haven’t looked back. With over 21 years of experience in the construction and telecommunications industries, I’ve built my career on a foundation of hard work and dedication. As a single father of four, I understand the importance of multitasking and perseverance—qualities that have shaped my approach to life and work.
-                </p>
+        <!-- Job 2: Senior Field Technician -->
+        <div class="job-section">
+            <h3>Senior Field Technician (Contract)</h3>
+            <p>Westland Towers – Boise, ID | July 2022 – June 2023</p>
+            <ul>
+                <li>Directed the installation, commissioning, and calibration of wireless communication systems.</li>
+            </ul>
+            <div id="job2" class="expandable">
+                <ul>
+                    <li>Performed preventive and corrective maintenance to maximize system reliability and minimize network downtime.</li>
+                    <li>Collaborated with project managers, engineers, and clients to troubleshoot and resolve technical challenges.</li>
+                    <li>Mentored and trained junior technicians to promote adherence to safety protocols.</li>
+                    <strong>Key Achievements:</strong>
+                    <ul>
+                        <li>Spearheaded successful cellular site upgrades, improving network performance and reducing downtime.</li>
+                        <li>Implemented proactive maintenance schedules, reducing emergency callouts and increasing system uptime.</li>
+                    </ul>
+                </ul>
             </div>
+            <button class="expand-btn" id="expand-job2" onclick="toggleDetails('job2')">Read More</button>
+            <button class="collapse-btn" id="collapse-job2" onclick="toggleDetails('job2')">Read Less</button>
         </div>
-    </section>
 
-    <!-- Professional Summary Section -->
-    <section id="professional-summary" class="section">
-        <div class="container">
-            <h2>Professional Summary</h2>
-            <p>
-                Results-driven construction and telecommunications professional with over 21 years of experience. Adept at leading teams, managing large-scale projects, and delivering high-quality results within tight deadlines. Expertise spans cell tower construction, fiber optic installation, wireless communication systems, and microwave tower construction.
-            </p>
-        </div>
-    </section>
+        <!-- Add other jobs similarly -->
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Work Experience</h2>
+        <!-- Core Competencies -->
+        <h2>Core Competencies</h2>
+        <ul>
+            <li>Project Management: Expertise in planning, execution, site supervision, resource allocation, and quality control for multi-million-dollar projects.</li>
+            <li>Financial Management: Skilled in budgeting, forecasting, and cost control, capable of driving profitability and operational efficiency.</li>
+            <li>Telecommunications Expertise: Extensive experience in wireless communication systems, including LTE, 5G, VoLTE, GSM, CDMA.</li>
+        </ul>
 
-            <div class="job">
-                <h3 onclick="toggleDetails('job1')">Telecommunications Project Manager</h3>
-                <div id="job1" class="job-details" style="display:none;">
-                    <p>Managed telecommunications projects for large clients, ensuring successful implementation...</p>
-                    <img src="https://github.com/JadeBowen/jaderesume/blob/main/20160816_201342-1.jpg?raw=true" alt="Project Image">
-                </div>
-            </div>
+        <!-- Certifications -->
+        <h2>Certifications</h2>
+        <ul>
+            <li>OSHA 10 & 30 Certified</li>
+            <li>First Aid and CPR Certified</li>
+            <li>ComTrain Certified Instructor (Tower Rescue and Rope Access)</li>
+        </ul>
 
-            <div class="job">
-                <h3 onclick="toggleDetails('job2')">Construction Manager</h3>
-                <div id="job2" class="job-details" style="display:none;">
-                    <p>Led large-scale construction efforts for multimillion-dollar projects...</p>
-                    <img src="https://github.com/JadeBowen/jaderesume/blob/main/20140925_082356.jpg?raw=true" alt="Construction Image">
-                </div>
-            </div>
+        <!-- Mission and Impact Statement -->
+        <h2>Mission Statement</h2>
+        <p>As a results-driven professional with over 21 years of experience in construction and telecommunications, my mission is to foster a culture of integrity, respect, and collaboration...</p>
 
-            <div class="job">
-                <h3 onclick="toggleDetails('job3')">Operations Manager</h3>
-                <div id="job3" class="job-details" style="display:none;">
-                    <p>Oversaw daily operations for multiple departments, ensuring efficiency and success...</p>
-                    <img src="https://github.com/JadeBowen/jaderesume/blob/main/20171206_170323.png?raw=true" alt="Operations Image">
-                </div>
-            </div>
-        </div>
-    </section>
+        <h2>Impact Statement</h2>
+        <p>Through strategic leadership and operational efficiency, I aim to help companies build stronger brands, enhance reputation, and achieve significant growth...</p>
 
-    <!-- Downloads Section -->
-    <section id="downloads" class="section">
-        <div class="container">
-            <h2>Download My Resume</h2>
-            <p>
-                Download a two-page summary of my resume or the full detailed version.
-            </p>
-            <button onclick="window.open('path/to/two-page-resume.pdf')">Download 2-Page Resume</button>
-            <button onclick="window.open('path/to/full-resume.pdf')">Download Full Resume</button>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>Thank you for visiting my resume website. Feel free to reach out via email or LinkedIn.</p>
-            <img src="https://github.com/JadeBowen/jaderesume/blob/main/hdpe-smooth-wall-conduit-1024x854.jpg?raw=true" alt="Footer Image" width="100">
-        </div>
-    </footer>
-
-    <!-- Link to external JavaScript file -->
-    <script src="scripts.min.js"></script>
-
+        <!-- Footer with contact and QR codes -->
+        <footer style="background-color: #333333; color: white; padding: 20px; text-align: center;">
+            <p>Contact Information</p>
+            <p>Email: Jade.Bowen.career@gmail.com | Phone: 208-371-0647</p>
+            <p><a href="https://linkedin.com/in/jadebowen" target="_blank" style="color: #008CBA;">LinkedIn: linkedin.com/in/jadebowen</a></p>
+            <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code">
+        </footer>
+    </div>
 </body>
 </html>
