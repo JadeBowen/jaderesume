@@ -4,92 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jade Bowen Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">  <!-- Link to CSS file -->
 </head>
 <body>
-    <!-- Loading Spinner -->
-    <div class="loader" id="loader">
-        <img src="loading-spinner-url.jpg" alt="Loading...">
-    </div>
 
-    <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/main/eye%20logo.webp" alt="Jade Bowen Logo">
+            <img src="https://github.com/JadeBowen/jaderesume/blob/main/eye%20logo.webp?raw=true" alt="Jade Bowen Logo" />
         </div>
-        <h1>Jade Bowen</h1>
-        <p>Boise, ID 83709 | 208-371-0647 | Jade.Bowen.career@gmail.com</p>
-        <a href="https://linkedin.com/in/jadebowen" class="linkedin-button">LinkedIn</a>
-        <a href="your-website-url" class="download-resume">Download Full Resume</a>
+        <div class="title">
+            <h1>Jade Bowen</h1>
+            <p>Boise, ID 83709 | 208-371-0647 | <a href="mailto:jade.bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a> | 
+                <a href="https://linkedin.com/in/jadebowen">LinkedIn</a>
+            </p>
+        </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
+    <section id="about-me">
         <h2>About Me</h2>
-        <img class="profile-photo" src="https://github.com/JadeBowen/jaderesume/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen">
-        <p>
-            I started climbing cell phone towers at 18 and haven’t looked back, leading a steady progression of never looking down...
-        </p>
+        <img src="https://github.com/JadeBowen/jaderesume/blob/main/head%20shot%20suit.jpg?raw=true" alt="Headshot" class="headshot">
+        <p>I started climbing cell phone towers at 18 and haven’t looked back...</p>
     </section>
 
-    <!-- Professional Summary -->
-    <section id="summary">
+    <section id="professional-summary">
         <h2>Professional Summary</h2>
-        <p>Results-driven construction and telecommunications professional with over 21 years of experience in both hands-on fieldwork and management roles...</p>
+        <p>Results-driven construction and telecommunications professional with over 21 years of experience...</p>
     </section>
 
-    <!-- Professional Experience Section with Expandable Job Descriptions -->
+    <!-- Job titles with collapsible descriptions -->
     <section id="experience">
         <h2>Professional Experience</h2>
 
-        <div class="job">
-            <button class="toggle-job" onclick="toggleJob('job1')">Finance and Marketing Manager</button>
-            <div id="job1" class="job-description">
-                <p>Boise's Best Auto Sales – Boise, ID | June 2023 – Present</p>
-                <ul>
-                    <li>Spearheaded financial strategy, managing budgeting, forecasting, and financial reporting to enhance profitability...</li>
-                </ul>
-            </div>
+        <div class="job-title">Finance and Marketing Manager</div>
+        <div class="job-description">
+            <p>Boise's Best Auto Sales – Boise, ID | June 2023 – Present</p>
+            <ul>
+                <li>Spearheaded financial strategy...</li>
+                <!-- Other job description bullets -->
+            </ul>
         </div>
 
-        <div class="job">
-            <button class="toggle-job" onclick="toggleJob('job2')">Senior Field Technician (Contract)</button>
-            <div id="job2" class="job-description">
-                <p>Westland Towers – Boise, ID | July 2022 – June 2023</p>
-                <ul>
-                    <li>Directed installation, commissioning, and calibration of wireless communication systems...</li>
-                </ul>
-            </div>
+        <div class="job-title">Senior Field Technician</div>
+        <div class="job-description">
+            <p>Westland Towers – Boise, ID | July 2022 – June 2023</p>
+            <ul>
+                <li>Directed the installation, commissioning...</li>
+                <!-- Other job description bullets -->
+            </ul>
         </div>
 
-        <div class="job">
-            <button class="toggle-job" onclick="toggleJob('job3')">Telecommunications Construction Coordinator</button>
-            <div id="job3" class="job-description">
-                <p>First Point Group – Boise, ID | October 2021 – July 2022</p>
-                <ul>
-                    <li>Coordinated all aspects of cell tower construction and network projects...</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Continue adding jobs here -->
+        <!-- More jobs -->
     </section>
 
-    <!-- Background Images -->
-    <div class="background-images">
-        <img src="https://github.com/JadeBowen/jaderesume/blob/main/hdpe-smooth-wall-conduit-1024x854.jpg?raw=true" alt="Conduit Spool" class="bg-image">
-        <img src="https://github.com/JadeBowen/jaderesume/blob/main/an-artist-render-of-an-xmc-2400-fan-on-a-chip-placed-inside-a-microphone-blue-and-orange-lines-are-used-to-illustrate-the-dire.jpg?raw=true" alt="Chip Data" class="bg-image">
-        <img src="https://github.com/JadeBowen/jaderesume/blob/main/1676625570373.jpeg?raw=true" alt="Switch Room" class="bg-image">
-    </div>
-
-    <!-- Contact Section -->
     <footer>
-        <h2>Contact Me</h2>
-        <p>Email: Jade.Bowen.career@gmail.com</p>
-        <p>Phone: 208-371-0647</p>
-        <img src="QR-Code-URL-LinkedIn" alt="LinkedIn QR Code">
-        <img src="QR-Code-URL-Website" alt="Website QR Code">
+        <div class="contact-info">
+            <p>Contact: <a href="mailto:jade.bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a></p>
+            <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code">
+        </div>
     </footer>
+
+    <script src="script.js"></script>  <!-- Link to JavaScript file -->
 </body>
 </html>
