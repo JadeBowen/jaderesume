@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jade Bowen's professional resume website">
+    <meta name="keywords" content="Jade Bowen, Resume, Telecommunications, Construction, Project Manager">
+    <meta property="og:title" content="Jade Bowen - Professional Resume">
+    <meta property="og:description" content="View Jade Bowen's professional resume, including work experience, skills, and downloadable options.">
+    <meta property="og:image" content="path/to/social-preview-image.jpg">
+    <meta property="og:url" content="https://jadebowen.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Jade Bowen - Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css"> <!-- Minified CSS -->
+</head>
+<body>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+        <p>Loading...</p>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="path/to/logo.jpg" alt="Jade Bowen Logo">
+            </div>
+            <div class="contact-info">
+                <h1>Jade Bowen</h1>
+                <p>Boise, ID | Phone: <a href="tel:+12083710647">208-371-0647</a> | Email: <a href="mailto:jade.bowen.career@gmail.com">jade.bowen.career@gmail.com</a></p>
+                <p>
+                    <a href="https://linkedin.com/in/jadebowen" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </p>
+                <img src="path/to/qr-code.png" alt="QR Code to Resume">
+            </div>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2>About Me</h2>
+            <img src="path/to/headshot.jpg" alt="Jade Bowen Headshot" class="profile-pic">
+            <p>I started climbing cell phone towers at 18 and haven’t looked back...</p>
+        </div>
+    </section>
+
+    <!-- Professional Summary Section -->
+    <section id="professional-summary" class="reveal">
+        <div class="container">
+            <h2>Professional Summary</h2>
+            <p>Results-driven construction and telecommunications professional...</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="reveal">
+        <div class="container">
+            <h2>Professional Experience</h2>
+
+            <!-- Job Entry 1 -->
+            <div class="job-entry" data-year="2023">
+                <h3 onclick="toggleDetails('job1')">Finance and Marketing Manager - Boise's Best Auto Sales</h3>
+                <div id="job1" class="job-details">
+                    <img src="path/to/finance-job-photo.jpg" alt="Finance and Marketing Work Photo">
+                    <p>Spearheaded financial strategy, managing budgeting, and forecasting...</p>
+                </div>
+            </div>
+
+            <!-- Job Entry 2 -->
+            <div class="job-entry" data-year="2022">
+                <h3 onclick="toggleDetails('job2')">Senior Field Technician - Westland Towers</h3>
+                <div id="job2" class="job-details">
+                    <img src="path/to/tower-work-photo.jpg" alt="Senior Technician Work Photo">
+                    <p>Directed the installation, commissioning, and calibration of wireless systems...</p>
+                </div>
+            </div>
+
+            <!-- Job Entry 3 -->
+            <div class="job-entry" data-year="2021">
+                <h3 onclick="toggleDetails('job3')">Telecommunications Construction Coordinator - First Point Group</h3>
+                <div id="job3" class="job-details">
+                    <p>Managed multimillion-dollar telecom projects, ensuring timely completion and compliance...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Downloadable Assets Section -->
+    <section id="downloads">
+        <div class="container">
+            <h2>Downloadable Resume</h2>
+            <p>Download my resume in the format you prefer:</p>
+            <ul>
+                <li><a href="path/to/Jade_Bowen_Resume.pdf" download>Download PDF Resume</a></li>
+                <li><a href="path/to/Jade_Bowen_vCard.vcf" download>Download vCard</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="/submit" method="POST" onsubmit="return validateForm()">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Back to Top</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jade Bowen | Boise, ID | <a href="mailto:jade.bowen.career@gmail.com">jade.bowen.career@gmail.com</a></p>
+            <p>Connect: <a href="https://linkedin.com/in/jadebowen" target="_blank" rel="noopener">LinkedIn</a> | <a href="https://facebook.com/jadebowen" target="_blank" rel="noopener">Facebook</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script src="scripts.min.js"></script> <!-- Minified JS -->
+
+</body>
+</html>
