@@ -1,86 +1,177 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* Gradients for Sections */
-#about, #downloads, #professional-summary {
-    background: linear-gradient(135deg, #333, #666);
-    color: white;
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #333, #555);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background: linear-gradient(45deg, #555, #777);
-    transform: scale(1.05);
-}
-
-/* Header */
+/* Header Styles */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .container {
+    color: white;
+    padding: 20px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 header .logo img {
-    max-width: 150px;
+    width: 80px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 0;
 }
 
 header .contact-info {
     text-align: right;
 }
 
-header .contact-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header .contact-info p,
-header .contact-info a {
-    font-size: 1rem;
-    color: #fff;
-}
-
-header .contact-info a:hover {
-    text-decoration: underline;
+header .contact-info p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 header .contact-info img {
-    width: 100px;
+    width: 130px;
     margin-top: 10px;
 }
 
-/* Icons */
-a i {
-    font-size: 1.5rem;
-    margin-right: 10px;
+/* About Me Section */
+#about {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+#about p {
+    font-size: 1.1em;
+}
+
+/* Work Experience Section */
+#experience {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.job h3:hover {
+    background-color: #777;
+}
+
+.job img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* Downloads Section */
+#downloads {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#downloads button {
+    padding: 10px 25px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#downloads button:hover {
+    background-color: #555;
 }
 
 /* Footer */
 footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .contact-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img.profile-pic {
+        margin: 0 0 20px 0;
+    }
+}
