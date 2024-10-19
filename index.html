@@ -1,300 +1,91 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* Body Styling */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.8;
-    color: #333;
-    background-color: #eaeaea;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade Bowen Professional Resume</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
 
-/* Dark Mode */
-body.dark-mode {
-    background-color: #1b1b1b;
-    color: #f5f5f5;
-}
+<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('https://raw.githubusercontent.com/JadeBowen/jaderesume/main/world-connected-photo.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
+    <!-- Logo Section -->
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/refs/heads/main/eye%20logo.webp" alt="Jade Bowen Logo" style="width: 200px;">
+    </div>
 
-.hero h1 {
-    font-size: 64px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    animation: fadeInDown 2s ease-in-out;
-    text-transform: uppercase;
-}
+    <!-- Headshot Section -->
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="https://github.com/JadeBowen/jaderesume/blob/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen Headshot" style="width: 150px; height: 150px; border-radius: 50%;">
+    </div>
 
-.hero h2 {
-    font-size: 28px;
-    color: #cccccc;
-    animation: fadeInUp 2s ease-in-out;
-    margin-bottom: 30px;
-}
+    <!-- Contact Information -->
+    <div style="text-align: center; margin-top: 20px;">
+        <h1>Jade Bowen</h1>
+        <p>Boise, ID | 208-371-0647 | <a href="mailto:Jade.Bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/jadebowen" target="_blank">LinkedIn: linkedin.com/in/jadebowen</a></p>
+    </div>
 
-.hero .linkedin-button {
-    font-size: 18px;
-    padding: 15px 30px;
-    color: white;
-    background-color: #0077b5;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
+    <!-- Professional Summary Section -->
+    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Professional Summary</h2>
+        <p style="color: #555;">
+            Results-driven construction and telecommunications professional with over 21 years of experience in both hands-on fieldwork and management roles. Proven ability to lead teams, manage large-scale projects, and deliver high-quality results within tight deadlines. Expertise spans cell tower construction, fiber optic installation, wireless communication systems, and microwave tower construction. Adept at utilizing technology to streamline processes and enhance efficiency. Strong focus on safety, quality control, and client satisfaction.
+        </p>
+    </section>
 
-.hero .linkedin-button:hover {
-    background-color: #005f8c;
-    transform: translateY(-5px);
-}
+    <!-- Technical Skills Section -->
+    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Technical Skills</h2>
+        <ul style="color: #555;">
+            <li><strong>Telecommunications:</strong> Wireless communication systems, fiber optics (OSP, FTTH, FTTC), antenna sweeps, coaxial cabling, RF equipment, LTE, 5G, VoLTE, GSM, CDMA, 3G, 4G LTE.</li>
+            <li><strong>Construction Management:</strong> Project planning, budgeting, quality control, safety compliance, team supervision, subcontractor management, civil excavation, site restoration, installation of fiber optic infrastructure.</li>
+            <li><strong>Software Proficiencies:</strong> Microsoft Office Suite (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets, Slides), Procore, Buildertrend, CRM Software.</li>
+            <li><strong>Safety Management Standards:</strong> OSHA compliance, safety inspection, regulatory adherence.</li>
+        </ul>
+    </section>
 
-/* Floating Logo */
-.floating-logo {
-    width: 120px;
-    animation: float 4s ease-in-out infinite;
-    margin: 20px 0;
-}
+    <!-- Professional Experience Section -->
+    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Professional Experience</h2>
 
-/* About Section */
-.about {
-    padding: 100px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
+        <!-- Expandable Job 1 -->
+        <button class="collapsible" style="width: 100%; padding: 15px; font-size: 18px; background-color: #008CBA; color: white; border: none; text-align: left;">Finance and Marketing Manager - Boise's Best Auto Sales</button>
+        <div class="content" style="display: none; padding: 15px; color: #555;">
+            <p>Managed financial strategy, marketing campaigns, and operational processes...</p>
+            <ul>
+                <li>Increased profit margin through cost management...</li>
+                <li>Developed personalized marketing campaigns to improve retention...</li>
+            </ul>
+        </div>
 
-.about h2 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-}
+        <!-- Expandable Job 2 -->
+        <button class="collapsible" style="width: 100%; padding: 15px; font-size: 18px; background-color: #008CBA; color: white; border: none; text-align: left;">Senior Field Technician (Contract) - Westland Towers</button>
+        <div class="content" style="display: none; padding: 15px; color: #555;">
+            <p>Directed installation and commissioning of wireless communication systems...</p>
+            <ul>
+                <li>Led assembly, installation, and optimization of cell tower infrastructure...</li>
+                <li>Trained junior technicians in safety protocols and troubleshooting techniques...</li>
+            </ul>
+        </div>
 
-.about-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
+        <!-- Add more job experiences similarly -->
+    </section>
 
-.about-photo:hover {
-    transform: scale(1.1);
-}
+    <!-- Footer Section with Contact & QR Codes -->
+    <footer style="background-color: #333; padding: 20px; color: white;">
+        <div style="text-align: center;">
+            <h3>Contact Me</h3>
+            <p>Email: Jade.Bowen.career@gmail.com</p>
+            <p>Phone: 208-371-0647</p>
+            <p><a href="https://linkedin.com/in/jadebowen" target="_blank" style="color: #008CBA;">LinkedIn: linkedin.com/in/jadebowen</a></p>
+            <img src="https://example.com/qr-code-1.png" alt="QR Code for LinkedIn" style="width: 100px; margin: 10px;">
+            <img src="https://example.com/qr-code-2.png" alt="QR Code for Website" style="width: 100px; margin: 10px;">
+        </div>
+    </footer>
 
-/* Professional Summary Section */
-.summary {
-    padding: 100px 20px;
-    background-color: #f4f4f4;
-}
+    <script src="script.js"></script> <!-- Link to external JS file -->
+</body>
 
-.summary h2 {
-    font-size: 38px;
-    margin-bottom: 30px;
-}
-
-.summary p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Skills Section */
-.skills {
-    padding: 80px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.skills h2 {
-    font-size: 38px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.skills ul {
-    list-style-type: none;
-    margin-top: 20px;
-    padding: 0;
-}
-
-.skills li {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Collapsible Job Descriptions */
-.job {
-    margin-bottom: 40px;
-}
-
-.job h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.job-description {
-    display: none;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: height 0.3s ease-in-out;
-}
-
-.job-title {
-    background-color: #333;
-    color: white;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.job-title:hover {
-    background-color: #555;
-}
-
-.job-title.active + .job-description {
-    display: block;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 20px;
-    background-color: #222;
-    color: white;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 42px;
-    margin-bottom: 40px;
-}
-
-.contact-info {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #ddd;
-}
-
-.contact-info a {
-    color: #00a0dc;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    color: #fff;
-}
-
-/* Download Button */
-.download-button {
-    background-color: #00a0dc;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 20px;
-}
-
-.download-button:hover {
-    background-color: #0077b5;
-    transform: translateY(-5px);
-}
-
-/* QR Code */
-.qr {
-    width: 120px;
-    margin: 20px;
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    background-color: #111;
-    color: white;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-    .hero h2 {
-        font-size: 20px;
-    }
-    .about-photo {
-        width: 120px;
-        height: 120px;
-    }
-    .skills ul {
-        padding-left: 0;
-    }
-    .job-description {
-        display: block;
-    }
-}
+</html>
