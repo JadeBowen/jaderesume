@@ -1,86 +1,321 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333333;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
-header {
+/* Body Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('https://raw.githubusercontent.com/JadeBowen/jaderesume/main/world-connected-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    background-color: #333333;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    animation: fadeInDown 1.8s ease-in-out;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #cccccc;
+    animation: fadeInUp 2s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.hero .linkedin-button {
+    font-size: 18px;
+    padding: 15px 30px;
     color: white;
-    padding: 20px 0;
-}
-
-.logo img {
-    width: 100px;
-}
-
-.title h1 {
-    font-size: 24pt;
-    margin-bottom: 5px;
-}
-
-.title p {
-    font-size: 14pt;
-}
-
-a {
-    color: #008CBA;
+    background-color: #0077b5;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
-    text-decoration: underline;
+.hero .linkedin-button:hover {
+    background-color: #005f8c;
+    transform: translateY(-5px);
 }
 
-#about-me, #professional-summary, #experience {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 0;
-    border-radius: 10px;
+/* Floating Logo */
+.floating-logo {
+    width: 130px;
+    animation: float 4s ease-in-out infinite;
+    margin: 30px 0;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-#about-me img {
+/* About Section */
+.about {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-photo {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 20px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Job Expand/Collapse */
-.job-title {
-    cursor: pointer;
-    background-color: #333333;
-    color: white;
-    padding: 15px;
-    font-size: 18pt;
-    margin: 10px 0;
-    border-radius: 5px;
+.about-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.job-title:hover {
-    background-color: #555555;
+/* Professional Summary Section */
+.summary {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.summary h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+}
+
+.summary p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Job Descriptions Section */
+.job {
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.job:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.job h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .job-description {
-    max-height: 0;
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease-in-out;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    padding: 0 15px;
-    background-color: #f2f2f2;
 }
 
-footer {
-    background-color: #333333;
+.job-title {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.job-title:hover {
+    background-color: #444;
+}
+
+.job-title.active + .job-description {
+    display: block;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px 0;
 }
 
-.contact-info img {
-    width: 100px;
-    margin-top: 10px;
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.contact-info a {
+    color: #00a0dc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* Download Button */
+.download-button {
+    background-color: #00a0dc;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+    background-color: #0077b5;
+    transform: translateY(-5px);
+}
+
+/* QR Code */
+.qr {
+    width: 140px;
+    margin: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero h2 {
+        font-size: 20px;
+    }
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .skills ul {
+        padding-left: 0;
+    }
+    .job-description {
+        display: block;
+    }
 }
