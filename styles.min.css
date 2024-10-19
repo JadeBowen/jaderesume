@@ -1,117 +1,105 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333333;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
 
-/* Section Headers */
-h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 15px;
+h1, h2 {
+  color: #333;
 }
 
-h1 {
-    font-size: 30px;
-    color: #333;
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
 }
 
-/* Contact Section */
-p, a {
-    font-size: 18px;
-    color: #555;
-    margin: 10px 0;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
-a {
-    color: #008CBA;
-    text-decoration: none;
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
 }
 
-/* Buttons for Collapsible Sections */
-button.collapsible {
-    background-color: #008CBA;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    text-align: left;
-    margin-top: 10px;
+.navbar ul li a:hover {
+  background-color: #555;
+  border-radius: 4px;
 }
 
-button.collapsible:after {
-    content: '\002B'; /* Add plus symbol */
-    color: white;
-    font-weight: bold;
-    float: right;
+/* Scroll Animation */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-button.collapsible.active:after {
-    content: "\2212"; /* Add minus symbol when active */
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Collapsible Content */
-div.content {
-    padding: 0 18px;
-    display: none;
-    background-color: #f1f1f1;
-    overflow: hidden;
-    font-size: 16px;
+/* Job Section Expand/Collapse */
+.details {
+  display: none;
 }
 
-/* Resume Sections */
-section {
-    margin: 40px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.details.visible {
+  display: block;
 }
 
-/* Footer Section */
-footer {
-    background-color: #333333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Contact Form */
+#contact {
+  background-color: #fff;
+  padding: 50px 20px;
 }
 
-footer p, footer a {
-    color: white;
-    font-size: 18px;
-    margin: 5px 0;
+#contact label {
+  display: block;
+  margin: 10px 0 5px;
 }
 
-footer img {
-    width: 100px;
-    margin: 10px;
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
 }
 
-footer a:hover {
-    color: #008CBA;
+/* Buttons */
+button, .btn {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 26px;
-    }
+button:hover, .btn:hover {
+  background-color: #005f73;
+  transform: scale(1.05);
+}
 
-    h2 {
-        font-size: 22px;
-    }
+/* Testimonials */
+#testimonials {
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
 
-    p, a {
-        font-size: 16px;
-    }
-
-    footer p {
-        font-size: 16px;
-    }
+.testimonial {
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
 }
