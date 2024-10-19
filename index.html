@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Bowen Professional Resume</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Resume of Jade Bowen - Telecommunications and Construction Expert with 21+ years of experience.">
+  <meta name="keywords" content="Jade Bowen, Telecommunications, Construction, Resume">
+  <meta name="author" content="Jade Bowen">
+  <title>Jade Bowen | Resume</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Logo Section -->
-    <div style="text-align: center; margin-top: 20px;">
-        <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/refs/heads/main/eye%20logo.webp" alt="Jade Bowen Logo" style="width: 200px;">
+  <!-- About Me Section -->
+  <section id="about" class="scroll-animate">
+    <h1>About Me</h1>
+    <img src="https://github.com/JadeBowen/jaderesume/blob/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen Headshot" class="headshot">
+    <p>As a results-driven professional with over 20 years of experience in construction and telecommunications, my mission is...</p>
+  </section>
+
+  <!-- Full Resume Section -->
+  <section id="resume" class="scroll-animate">
+    <h2>Full Resume</h2>
+    <p>Below is the downloadable version of my full resume...</p>
+    <!-- Button to expand/collapse individual sections -->
+    <div class="job-section">
+      <button onclick="toggleDetails('job1')">Finance and Marketing Manager</button>
+      <div id="job1" class="details">
+        <p>Detailed job description here...</p>
+      </div>
     </div>
+    <!-- More job sections -->
+  </section>
 
-    <!-- Headshot Section -->
-    <div style="text-align: center; margin-top: 20px;">
-        <img src="https://github.com/JadeBowen/jaderesume/blob/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen Headshot" style="width: 150px; height: 150px; border-radius: 50%;">
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="scroll-animate">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Jade Bowen is an exceptional leader who consistently delivers results..." - Client</p>
     </div>
+  </section>
 
-    <!-- Contact Information -->
-    <div style="text-align: center; margin-top: 20px;">
-        <h1>Jade Bowen</h1>
-        <p>Boise, ID | 208-371-0647 | <a href="mailto:Jade.Bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a></p>
-        <p><a href="https://linkedin.com/in/jadebowen" target="_blank">LinkedIn: linkedin.com/in/jadebowen</a></p>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="scroll-animate">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-    <!-- Professional Summary Section -->
-    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
-        <h2 style="color: #333;">Professional Summary</h2>
-        <p style="color: #555;">
-            Results-driven construction and telecommunications professional with over 21 years of experience in both hands-on fieldwork and management roles. Proven ability to lead teams, manage large-scale projects, and deliver high-quality results within tight deadlines. Expertise spans cell tower construction, fiber optic installation, wireless communication systems, and microwave tower construction. Adept at utilizing technology to streamline processes and enhance efficiency. Strong focus on safety, quality control, and client satisfaction.
-        </p>
-    </section>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-    <!-- Technical Skills Section -->
-    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
-        <h2 style="color: #333;">Technical Skills</h2>
-        <ul style="color: #555;">
-            <li><strong>Telecommunications:</strong> Wireless communication systems, fiber optics (OSP, FTTH, FTTC), antenna sweeps, coaxial cabling, RF equipment, LTE, 5G, VoLTE, GSM, CDMA, 3G, 4G LTE.</li>
-            <li><strong>Construction Management:</strong> Project planning, budgeting, quality control, safety compliance, team supervision, subcontractor management, civil excavation, site restoration, installation of fiber optic infrastructure.</li>
-            <li><strong>Software Proficiencies:</strong> Microsoft Office Suite (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets, Slides), Procore, Buildertrend, CRM Software.</li>
-            <li><strong>Safety Management Standards:</strong> OSHA compliance, safety inspection, regulatory adherence.</li>
-        </ul>
-    </section>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
 
-    <!-- Professional Experience Section -->
-    <section style="margin: 40px; padding: 20px; background-color: #fff; border-radius: 8px;">
-        <h2 style="color: #333;">Professional Experience</h2>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
-        <!-- Expandable Job 1 -->
-        <button class="collapsible" style="width: 100%; padding: 15px; font-size: 18px; background-color: #008CBA; color: white; border: none; text-align: left;">Finance and Marketing Manager - Boise's Best Auto Sales</button>
-        <div class="content" style="display: none; padding: 15px; color: #555;">
-            <p>Managed financial strategy, marketing campaigns, and operational processes...</p>
-            <ul>
-                <li>Increased profit margin through cost management...</li>
-                <li>Developed personalized marketing campaigns to improve retention...</li>
-            </ul>
-        </div>
+  <!-- Social Media Sharing -->
+  <section id="social-share">
+    <h3>Share My Resume</h3>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://jadebowen.github.io/jaderesume/" class="btn" target="_blank">Share on LinkedIn</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://jadebowen.github.io/jaderesume/" class="btn" target="_blank">Share on Facebook</a>
+  </section>
 
-        <!-- Expandable Job 2 -->
-        <button class="collapsible" style="width: 100%; padding: 15px; font-size: 18px; background-color: #008CBA; color: white; border: none; text-align: left;">Senior Field Technician (Contract) - Westland Towers</button>
-        <div class="content" style="display: none; padding: 15px; color: #555;">
-            <p>Directed installation and commissioning of wireless communication systems...</p>
-            <ul>
-                <li>Led assembly, installation, and optimization of cell tower infrastructure...</li>
-                <li>Trained junior technicians in safety protocols and troubleshooting techniques...</li>
-            </ul>
-        </div>
-
-        <!-- Add more job experiences similarly -->
-    </section>
-
-    <!-- Footer Section with Contact & QR Codes -->
-    <footer style="background-color: #333; padding: 20px; color: white;">
-        <div style="text-align: center;">
-            <h3>Contact Me</h3>
-            <p>Email: Jade.Bowen.career@gmail.com</p>
-            <p>Phone: 208-371-0647</p>
-            <p><a href="https://linkedin.com/in/jadebowen" target="_blank" style="color: #008CBA;">LinkedIn: linkedin.com/in/jadebowen</a></p>
-            <img src="https://example.com/qr-code-1.png" alt="QR Code for LinkedIn" style="width: 100px; margin: 10px;">
-            <img src="https://example.com/qr-code-2.png" alt="QR Code for Website" style="width: 100px; margin: 10px;">
-        </div>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link to external JS file -->
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
 </body>
-
 </html>
