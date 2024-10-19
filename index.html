@@ -3,66 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Bowen Resume</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Link to CSS file -->
+    <title>Jade Bowen | Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <script src="scripts.js" defer></script> <!-- External JavaScript file -->
 </head>
-<body>
 
-    <header>
-        <div class="logo">
-            <img src="https://github.com/JadeBowen/jaderesume/blob/main/eye%20logo.webp?raw=true" alt="Jade Bowen Logo" />
-        </div>
-        <div class="title">
-            <h1>Jade Bowen</h1>
-            <p>Boise, ID 83709 | 208-371-0647 | <a href="mailto:jade.bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a> | 
-                <a href="https://linkedin.com/in/jadebowen">LinkedIn</a>
-            </p>
+<body>
+    <!-- Parallax Header with floating elements and hero text -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/main/eye%20logo.webp" alt="Logo" class="floating-logo">
+            <h1 class="hero-title">Jade Bowen</h1>
+            <p class="hero-subtitle">Telecommunications & Construction Leader</p>
+            <div class="contact-info">
+                <a href="mailto:jade.bowen.career@gmail.com" class="contact-email">jade.bowen.career@gmail.com</a>
+                <span> | 208-371-0647</span>
+                <a href="https://linkedin.com/in/jadebowen" class="linkedin-button" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </header>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <img src="https://github.com/JadeBowen/jaderesume/blob/main/head%20shot%20suit.jpg?raw=true" alt="Headshot" class="headshot">
-        <p>I started climbing cell phone towers at 18 and haven’t looked back...</p>
+    <!-- About Me Section with floating effect on image -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p class="about-text">With over 21 years of experience in the construction and telecommunications industries...</p>
+                <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen" class="floating about-photo">
+            </div>
+        </div>
     </section>
 
-    <section id="professional-summary">
-        <h2>Professional Summary</h2>
-        <p>Results-driven construction and telecommunications professional with over 21 years of experience...</p>
+    <!-- Professional Summary Section -->
+    <section id="summary" class="section summary">
+        <div class="container">
+            <h2>Professional Summary</h2>
+            <p>Results-driven professional with over 21 years of experience...</p>
+        </div>
     </section>
 
-    <!-- Job titles with collapsible descriptions -->
-    <section id="experience">
-        <h2>Professional Experience</h2>
-
-        <div class="job-title">Finance and Marketing Manager</div>
-        <div class="job-description">
-            <p>Boise's Best Auto Sales – Boise, ID | June 2023 – Present</p>
-            <ul>
-                <li>Spearheaded financial strategy...</li>
-                <!-- Other job description bullets -->
-            </ul>
+    <!-- Skills Section with collapsible functionality -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <button class="expand-button">Show Skills</button>
+            <div class="skills-list">
+                <ul class="collapsible-content">
+                    <li>Telecommunications: LTE, 5G, RF equipment...</li>
+                    <li>Construction Management: Budgeting, safety protocols...</li>
+                    <li>Software Proficiency: Microsoft Office, Google Workspace...</li>
+                    <li>Safety Compliance: OSHA, regulatory adherence...</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="job-title">Senior Field Technician</div>
-        <div class="job-description">
-            <p>Westland Towers – Boise, ID | July 2022 – June 2023</p>
-            <ul>
-                <li>Directed the installation, commissioning...</li>
-                <!-- Other job description bullets -->
-            </ul>
-        </div>
-
-        <!-- More jobs -->
     </section>
 
-    <footer>
-        <div class="contact-info">
-            <p>Contact: <a href="mailto:jade.bowen.career@gmail.com">Jade.Bowen.career@gmail.com</a></p>
-            <img src="https://github.com/JadeBowen/jaderesume/blob/main/download%20(1).png?raw=true" alt="QR Code">
+    <!-- Professional Experience with expandable job descriptions -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="job">
+                <h3>Finance and Marketing Manager</h3>
+                <p>Boise's Best Auto Sales, June 2023 – Present</p>
+                <button class="expand-button">Expand Details</button>
+                <div class="job-description collapsible-content">
+                    <ul>
+                        <li>Led financial strategy and improved cash flow management...</li>
+                        <li>Implemented marketing strategies that increased brand visibility...</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Repeat for other job roles -->
         </div>
+    </section>
+
+    <!-- Contact and Download Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact & Downloads</h2>
+            <p>Email: <a href="mailto:jade.bowen.career@gmail.com">jade.bowen.career@gmail.com</a></p>
+            <p>Phone: 208-371-0647</p>
+            <div class="downloads">
+                <a href="Jade_Bowen_Resume.pdf" class="button download-button">Download Full Resume (PDF)</a>
+                <a href="Jade_Bowen_Business_Card.vcf" class="button download-button">Download Business Card (vCard)</a>
+            </div>
+            <div class="qr-codes">
+                <img src="[LinkedIn QR Code URL]" alt="LinkedIn QR Code" class="qr">
+                <img src="[Website QR Code URL]" alt="Website QR Code" class="qr">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Jade Bowen. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>  <!-- Link to JavaScript file -->
 </body>
 </html>
