@@ -1,101 +1,300 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Bowen | Professional Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
-    <script src="scripts.js" defer></script> <!-- External JavaScript file -->
-</head>
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <!-- Parallax Header with floating elements and hero text -->
-    <header class="hero">
-        <div class="hero-overlay">
-            <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/main/eye%20logo.webp" alt="Logo" class="floating-logo">
-            <h1 class="hero-title">Jade Bowen</h1>
-            <p class="hero-subtitle">Telecommunications & Construction Leader</p>
-            <div class="contact-info">
-                <a href="mailto:jade.bowen.career@gmail.com" class="contact-email">jade.bowen.career@gmail.com</a>
-                <span> | 208-371-0647</span>
-                <a href="https://linkedin.com/in/jadebowen" class="linkedin-button" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </header>
+/* Body Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #eaeaea;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
 
-    <!-- About Me Section with floating effect on image -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p class="about-text">With over 21 years of experience in the construction and telecommunications industries...</p>
-                <img src="https://raw.githubusercontent.com/JadeBowen/jaderesume/main/head%20shot%20suit.jpg?raw=true" alt="Jade Bowen" class="floating about-photo">
-            </div>
-        </div>
-    </section>
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+}
 
-    <!-- Professional Summary Section -->
-    <section id="summary" class="section summary">
-        <div class="container">
-            <h2>Professional Summary</h2>
-            <p>Results-driven professional with over 21 years of experience...</p>
-        </div>
-    </section>
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('https://raw.githubusercontent.com/JadeBowen/jaderesume/main/world-connected-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
 
-    <!-- Skills Section with collapsible functionality -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <button class="expand-button">Show Skills</button>
-            <div class="skills-list">
-                <ul class="collapsible-content">
-                    <li>Telecommunications: LTE, 5G, RF equipment...</li>
-                    <li>Construction Management: Budgeting, safety protocols...</li>
-                    <li>Software Proficiency: Microsoft Office, Google Workspace...</li>
-                    <li>Safety Compliance: OSHA, regulatory adherence...</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    animation: fadeInDown 2s ease-in-out;
+    text-transform: uppercase;
+}
 
-    <!-- Professional Experience with expandable job descriptions -->
-    <section id="experience" class="section experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="job">
-                <h3>Finance and Marketing Manager</h3>
-                <p>Boise's Best Auto Sales, June 2023 – Present</p>
-                <button class="expand-button">Expand Details</button>
-                <div class="job-description collapsible-content">
-                    <ul>
-                        <li>Led financial strategy and improved cash flow management...</li>
-                        <li>Implemented marketing strategies that increased brand visibility...</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Repeat for other job roles -->
-        </div>
-    </section>
+.hero h2 {
+    font-size: 28px;
+    color: #cccccc;
+    animation: fadeInUp 2s ease-in-out;
+    margin-bottom: 30px;
+}
 
-    <!-- Contact and Download Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2>Contact & Downloads</h2>
-            <p>Email: <a href="mailto:jade.bowen.career@gmail.com">jade.bowen.career@gmail.com</a></p>
-            <p>Phone: 208-371-0647</p>
-            <div class="downloads">
-                <a href="Jade_Bowen_Resume.pdf" class="button download-button">Download Full Resume (PDF)</a>
-                <a href="Jade_Bowen_Business_Card.vcf" class="button download-button">Download Business Card (vCard)</a>
-            </div>
-            <div class="qr-codes">
-                <img src="[LinkedIn QR Code URL]" alt="LinkedIn QR Code" class="qr">
-                <img src="[Website QR Code URL]" alt="Website QR Code" class="qr">
-            </div>
-        </div>
-    </section>
+.hero .linkedin-button {
+    font-size: 18px;
+    padding: 15px 30px;
+    color: white;
+    background-color: #0077b5;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
 
-    <footer class="footer">
-        <p>&copy; 2024 Jade Bowen. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+.hero .linkedin-button:hover {
+    background-color: #005f8c;
+    transform: translateY(-5px);
+}
+
+/* Floating Logo */
+.floating-logo {
+    width: 120px;
+    animation: float 4s ease-in-out infinite;
+    margin: 20px 0;
+}
+
+/* About Section */
+.about {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.about-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+}
+
+/* Professional Summary Section */
+.summary {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.summary h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.summary p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Collapsible Job Descriptions */
+.job {
+    margin-bottom: 40px;
+}
+
+.job h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease-in-out;
+}
+
+.job-title {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.job-title:hover {
+    background-color: #555;
+}
+
+.job-title.active + .job-description {
+    display: block;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.contact-info a {
+    color: #00a0dc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #fff;
+}
+
+/* Download Button */
+.download-button {
+    background-color: #00a0dc;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px;
+}
+
+.download-button:hover {
+    background-color: #0077b5;
+    transform: translateY(-5px);
+}
+
+/* QR Code */
+.qr {
+    width: 120px;
+    margin: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero h2 {
+        font-size: 20px;
+    }
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .skills ul {
+        padding-left: 0;
+    }
+    .job-description {
+        display: block;
+    }
+}
