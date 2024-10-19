@@ -1,105 +1,183 @@
 /* Global Styles */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 h1, h2 {
-  color: #333;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
 }
 
 /* Sticky Navbar */
 .navbar {
-  position: sticky;
-  top: 0;
-  background-color: #333;
-  padding: 10px 0;
-  z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
 }
 
 .navbar ul li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  background-color: #555;
-  border-radius: 4px;
+    background-color: #555;
+    border-radius: 4px;
 }
 
 /* Scroll Animation */
 .scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .scroll-visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+.headshot {
+    display: block;
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
 }
 
 /* Job Section Expand/Collapse */
 .details {
-  display: none;
+    display: none;
 }
 
 .details.visible {
-  display: block;
+    display: block;
+}
+
+.job-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.job-section button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
 }
 
 /* Contact Form */
 #contact {
-  background-color: #fff;
-  padding: 50px 20px;
+    background-color: #fff;
+    padding: 50px 20px;
 }
 
 #contact label {
-  display: block;
-  margin: 10px 0 5px;
+    display: block;
+    margin: 10px 0 5px;
 }
 
 #contact input, #contact textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
 }
 
-/* Buttons */
-button, .btn {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+#contact button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover, .btn:hover {
-  background-color: #005f73;
-  transform: scale(1.05);
+#contact button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
 }
 
 /* Testimonials */
 #testimonials {
-  padding: 50px;
-  text-align: center;
-  background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
 .testimonial {
-  margin: 20px 0;
-  font-style: italic;
-  color: #555;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Social Media Sharing */
+#social-share {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#social-share .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#social-share .btn:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
 }
